@@ -1,6 +1,6 @@
 version: '3'
 services:
-  api:
+  backend:
     image: boleknowak/wowee-link-api:latest
     ports:
       - ${API_PORT}:8000
@@ -11,4 +11,4 @@ services:
     ports:
       - ${FRONTEND_PORT}:3000
     environment:
-      - API_URL=http://api:8000
+      - API_URL=http://backend:8000
